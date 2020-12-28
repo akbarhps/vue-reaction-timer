@@ -1,5 +1,7 @@
 <template>
-  <div class="block" @click="stopTimer" v-if="showBlock">click me</div>
+  <div class="backdrop" @click.self="closeResult">
+    <div class="block" @click="stopTimer" v-if="showBlock">click me</div>
+  </div>
 </template>
 
 <script>
@@ -33,14 +35,24 @@ export default {
 </script>
 
 <style>
+.backdrop {
+  top: 0;
+  position: fixed;
+  background: black;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-content: center;
+}
 .block {
   width: 400px;
   border-radius: 20px;
   background: black;
   color: white;
+  border: 1px white solid;
   text-align: center;
   padding: 100px 0;
-  margin: 40px auto;
+  margin: auto;
   cursor: pointer;
 }
 </style>
