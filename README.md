@@ -1,5 +1,7 @@
 # reaction-timer
 
+Simple app using vue 3 🚀
+
 ## Project setup
 ```
 npm install
